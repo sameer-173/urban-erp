@@ -8,7 +8,7 @@ services:
       POSTGRES_USER: urban_admin
       POSTGRES_PASSWORD: urban_password123
     ports:
-      - "5432:5432"
+      - "5434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -50,7 +50,7 @@ services:
       - "start-dev"
       - "--import-realm"
     ports:
-      - "8080:8080"
+      - "8085:8080"
     volumes:
       - ./docker/keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
     depends_on:
